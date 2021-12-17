@@ -24,3 +24,10 @@ body
 {
     font-size: 22px;
 }
+
+#footer
+{
+    background-color: darkslategray;
+    line-height: 2;
+    margin: 0px;
+}
