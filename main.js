@@ -1,6 +1,7 @@
 rightWristX = 0;
 rigthWristY = 0;
 rightWristScore = 0;
+game_status = "";
 
 /*created by prashant shukla */
 
@@ -54,6 +55,12 @@ function gotPoses(results)
 	}
 }
 
+function startGame()
+{
+  game_status = "start";
+  document.getElementById("status").innerHTML = "Game is Loading";
+}
+
 
 function draw(){
   if(rightWristScore > 0.2)
@@ -73,6 +80,10 @@ function draw(){
  stroke("black");
  rect(0,0,20,700);
  
+ if(game_status == "start")
+  {
+    document.getElementById("status").innerHTML = "Game is Loaded";
+
    //funtion paddleInCanvas call 
    paddleInCanvas();
  
@@ -100,6 +111,7 @@ function draw(){
    
    //function move call which in very important
     move();
+  }
 }
 
 
